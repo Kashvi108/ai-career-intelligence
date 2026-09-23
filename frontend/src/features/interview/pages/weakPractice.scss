@@ -1,0 +1,624 @@
+.weak-page {
+    min-height: 100vh;
+    background: #080b10;
+    color: #f4f7fb;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.weak-header {
+    min-height: 76px;
+    padding: 0 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(8, 11, 16, 0.92);
+}
+
+.weak-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.weak-brand__core {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    color: #ffffff;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    background: #11161e;
+}
+
+.weak-brand span,
+.weak-header__status,
+.weak-eyebrow,
+.weak-areas > span,
+.weak-progress span,
+.weak-answer-card__heading span,
+.weak-evaluation__header span,
+.weak-feedback > span,
+.weak-columns > div > span,
+.weak-review__heading > span,
+.weak-review-card__top span,
+.weak-review-card > div > span,
+.weak-score-card > span,
+.weak-area-list > span {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: #7d8797;
+    text-transform: uppercase;
+}
+
+.weak-brand strong {
+    display: block;
+    margin-top: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f4f7fb;
+}
+
+.weak-header__status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.weak-header__status span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #8dffb0;
+    box-shadow: 0 0 12px rgba(141, 255, 176, 0.7);
+}
+
+.weak-container {
+    width: min(1100px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 55px 0 80px;
+}
+
+.weak-session {
+    width: 100%;
+}
+
+.weak-session__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 35px;
+}
+
+.weak-session__top h1 {
+    margin: 10px 0 10px;
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+}
+
+.weak-session__top p {
+    max-width: 620px;
+    margin: 0;
+    color: #929cab;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.weak-counter {
+    min-width: 110px;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    background: #0f131a;
+    text-align: right;
+}
+
+.weak-counter span {
+    display: block;
+    margin-bottom: 5px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    color: #697383;
+}
+
+.weak-counter strong {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.weak-counter small {
+    color: #687281;
+    font-size: 12px;
+}
+
+.weak-areas {
+    margin-bottom: 28px;
+}
+
+.weak-areas > div,
+.weak-area-list > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 11px;
+}
+
+.weak-area-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 11px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    background: #11161e;
+    color: #c5ccd6;
+    font-size: 12px;
+}
+
+.weak-progress {
+    margin-bottom: 28px;
+}
+
+.weak-progress > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 9px;
+}
+
+.weak-progress strong {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    color: #dce2ea;
+}
+
+.weak-progress__track {
+    height: 4px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #1b212b;
+}
+
+.weak-progress__fill {
+    height: 100%;
+    border-radius: inherit;
+    background: #f4f7fb;
+    transition: width 0.3s ease;
+}
+
+.weak-question-card {
+    padding: 32px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    background: #0f131a;
+}
+
+.weak-question-card__label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 22px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: #7d8797;
+}
+
+.weak-question-card__label span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+.weak-question-card h2 {
+    max-width: 900px;
+    margin: 0;
+    color: #f5f7fa;
+    font-size: clamp(20px, 2.5vw, 28px);
+    line-height: 1.45;
+    font-weight: 600;
+}
+
+.weak-answer-card {
+    padding: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    background: #0f131a;
+}
+
+.weak-answer-card__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 16px;
+}
+
+.weak-answer-card__heading strong {
+    display: block;
+    margin-top: 5px;
+    color: #dce2ea;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.weak-answer-card__heading small {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: #66707e;
+}
+
+.weak-answer-card textarea {
+    width: 100%;
+    min-height: 190px;
+    padding: 16px;
+    resize: vertical;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    outline: none;
+    background: #0a0e14 !important;
+    color: #eef2f7 !important;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.7;
+    transition: border-color 0.2s ease;
+}
+
+.weak-answer-card textarea::placeholder {
+    color: #5f6876;
+}
+
+.weak-answer-card textarea:focus {
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.weak-answer-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 13px;
+}
+
+.weak-answer-card__footer > span {
+    color: #687281;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+}
+
+.weak-submit,
+.weak-next button {
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 9px;
+    background: #f4f7fb;
+    color: #080b10;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.weak-submit:hover,
+.weak-next button:hover {
+    transform: translateY(-2px);
+    background: #ffffff;
+}
+
+.weak-submit:disabled,
+.weak-next button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.weak-evaluation {
+    margin-top: 18px;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    background: #0f131a;
+}
+
+.weak-evaluation__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.weak-evaluation__header h2 {
+    margin: 7px 0 0;
+    font-size: 21px;
+}
+
+.weak-evaluation__header > div:last-child {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.weak-evaluation__header small {
+    margin-left: 3px;
+    color: #6f7886;
+    font-size: 13px;
+}
+
+.weak-feedback {
+    padding: 18px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    background: #131923;
+}
+
+.weak-feedback p {
+    margin: 9px 0 0;
+    color: #aeb7c5;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.weak-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.weak-columns > div {
+    padding: 18px;
+    border-radius: 12px;
+    background: #131923;
+}
+
+.weak-columns ul {
+    margin: 12px 0 0;
+    padding-left: 18px;
+}
+
+.weak-columns li {
+    margin-bottom: 8px;
+    color: #aeb7c5;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.weak-next {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+/* Completion */
+
+.weak-complete {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.weak-complete__icon {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.weak-complete h1 {
+    margin: 10px 0 15px;
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+}
+
+.weak-complete > p {
+    max-width: 600px;
+    margin: 0 0 25px;
+    color: #8f98a7;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.weak-score-card {
+    padding: 25px;
+    margin-bottom: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    background: #0f131a;
+}
+
+.weak-score-card strong {
+    display: block;
+    margin: 8px 0;
+    font-size: 42px;
+}
+
+.weak-score-card strong small {
+    color: #697382;
+    font-size: 17px;
+}
+
+.weak-score-card p {
+    margin: 0;
+    color: #737d8b;
+    font-size: 12px;
+}
+
+.weak-area-list {
+    margin-bottom: 30px;
+}
+
+.weak-review {
+    margin-top: 35px;
+}
+
+.weak-review__heading {
+    margin-bottom: 18px;
+}
+
+.weak-review__heading h2 {
+    margin: 7px 0 0;
+    font-size: 25px;
+}
+
+.weak-review-card {
+    padding: 22px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 15px;
+    background: #0f131a;
+}
+
+.weak-review-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weak-review-card__top strong {
+    font-size: 16px;
+}
+
+.weak-review-card h3 {
+    margin: 14px 0 22px;
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+.weak-review-card > div:not(.weak-review-card__top) {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.weak-review-card p {
+    margin: 7px 0 0;
+    color: #aeb7c5;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.weak-loading {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 12px;
+    background: #080b10;
+    color: #f4f7fb;
+    text-align: center;
+}
+
+.weak-loading__core {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    background: #11161e;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+}
+
+.weak-loading span {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: #77818f;
+}
+
+.weak-loading h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+@media (max-width: 700px) {
+
+    .weak-header {
+        padding: 0 18px;
+    }
+
+    .weak-header__status {
+        display: none;
+    }
+
+    .weak-container {
+        width: min(100% - 28px, 1100px);
+        padding: 35px 0 55px;
+    }
+
+    .weak-session__top {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .weak-counter {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    .weak-question-card,
+    .weak-answer-card,
+    .weak-evaluation {
+        padding: 20px;
+    }
+
+    .weak-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .weak-answer-card__footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .weak-submit,
+    .weak-next button {
+        width: 100%;
+    }
+
+    .weak-next {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .weak-brand strong {
+        font-size: 13px;
+    }
+
+    .weak-session__top h1 {
+        font-size: 30px;
+    }
+
+    .weak-question-card h2 {
+        font-size: 19px;
+    }
+
+    .weak-complete h1 {
+        font-size: 44px;
+    }
+
+    .weak-review-card {
+        padding: 17px;
+    }
+}

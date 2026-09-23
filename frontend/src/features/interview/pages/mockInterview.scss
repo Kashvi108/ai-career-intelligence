@@ -1,0 +1,1024 @@
+/* =========================================
+   AI MOCK INTERVIEW
+   ========================================= */
+
+.mock-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 80% 10%, rgba(80, 95, 130, 0.12), transparent 28%),
+    #090b0f;
+  color: #f3f5f8;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.mock-header {
+  height: 78px;
+  padding: 0 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #1d222b;
+  background: rgba(9, 11, 15, 0.92);
+}
+
+.mock-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.mock-brand__core {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #596579;
+  border-radius: 10px;
+
+  background: #141923;
+
+  color: #e7ebf2;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.mock-brand span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #707b8d;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+.mock-brand strong {
+  display: block;
+
+  color: #f3f5f8;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.mock-header__status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #8d98a9;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+
+.mock-status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+  background: #8f9bad;
+
+  box-shadow: 0 0 12px rgba(143, 155, 173, 0.5);
+}
+
+
+/* =========================================
+   CONTAINER
+   ========================================= */
+
+.mock-container {
+  width: min(1100px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 58px 0 90px;
+}
+
+
+/* =========================================
+   LOADING
+   ========================================= */
+
+.mock-loading {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #090b0f;
+  color: #f3f5f8;
+
+  text-align: center;
+}
+
+.mock-loading__core {
+  width: 76px;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 24px;
+
+  border: 1px solid #4c586b;
+  border-radius: 50%;
+
+  background: #121720;
+
+  box-shadow:
+    0 0 0 12px rgba(80, 93, 115, 0.04),
+    0 0 40px rgba(80, 93, 115, 0.12);
+}
+
+.mock-loading__core span {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+}
+
+.mock-loading__label,
+.mock-eyebrow {
+  color: #7f8a9b;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.mock-loading h1 {
+  margin: 12px 0 8px;
+
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.mock-loading p {
+  margin: 0;
+
+  color: #737e90;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   ACTIVE SESSION
+   ========================================= */
+
+.mock-session__top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+
+  margin-bottom: 38px;
+}
+
+.mock-session__top h1 {
+  margin: 12px 0 10px;
+
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.mock-session__top p {
+  max-width: 560px;
+  margin: 0;
+
+  color: #7f8999;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.question-counter {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+
+  padding: 16px 20px;
+
+  border: 1px solid #252c37;
+  border-radius: 12px;
+
+  background: #10141b;
+}
+
+.question-counter span {
+  margin-right: 5px;
+
+  color: #6e798b;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
+.question-counter strong {
+  color: #f3f5f8;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 20px;
+}
+
+.question-counter small {
+  color: #687385;
+
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+
+/* =========================================
+   PROGRESS
+   ========================================= */
+
+.mock-progress {
+  margin-bottom: 24px;
+}
+
+.mock-progress__top {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 9px;
+
+  color: #687385;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
+.mock-progress__top strong {
+  color: #a9b2c0;
+}
+
+.mock-progress__track {
+  width: 100%;
+  height: 3px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+  background: #1c222c;
+}
+
+.mock-progress__fill {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #8c98aa;
+
+  transition: width 0.4s ease;
+}
+
+
+/* =========================================
+   QUESTION CARD
+   ========================================= */
+
+.mock-question-card {
+  position: relative;
+
+  margin-bottom: 18px;
+  padding: 34px 38px;
+
+  border: 1px solid #2a313d;
+  border-radius: 18px;
+
+  background:
+    radial-gradient(circle at 90% 0%, rgba(100, 115, 140, 0.08), transparent 30%),
+    #10141b;
+}
+
+.mock-question-card__label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 22px;
+
+  color: #7d899b;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+.ai-pulse {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+  background: #9ca7b7;
+
+  box-shadow: 0 0 14px rgba(156, 167, 183, 0.55);
+}
+
+.mock-question-card h2 {
+  max-width: 850px;
+  margin: 0;
+
+  color: #f4f6f9;
+
+  font-size: clamp(22px, 3vw, 31px);
+  font-weight: 550;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+}
+
+
+/* =========================================
+   ANSWER CARD
+   ========================================= */
+
+.mock-answer-card {
+  padding: 25px;
+
+  border: 1px solid #282f3a;
+  border-radius: 18px;
+
+  background: #0f1319;
+}
+
+.mock-answer-card__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.mock-answer-card__heading span,
+.evaluation-feedback > span,
+.evaluation-columns > div > span,
+.review-answer > span,
+.review-feedback > span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #748093;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+.mock-answer-card__heading strong {
+  color: #dce2ea;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mock-answer-card__heading small {
+  color: #626e80;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+}
+
+.mock-answer-card textarea {
+  display: block;
+
+  width: 100%;
+  min-height: 190px;
+
+  padding: 18px;
+
+  box-sizing: border-box;
+
+  resize: vertical;
+
+  border: 1px solid #29313d;
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #11161e !important;
+  color: #e8ecf4 !important;
+
+  font: inherit;
+  font-size: 15px;
+  line-height: 1.7;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.mock-answer-card textarea::placeholder {
+  color: #626d7d;
+}
+
+.mock-answer-card textarea:focus {
+  border-color: #596678;
+
+  background: #131922 !important;
+}
+
+.mock-answer-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 14px;
+}
+
+.mock-answer-card__footer > span {
+  color: #5f6a7b;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.mock-submit,
+.mock-next {
+  padding: 12px 18px;
+
+  border: 1px solid #465164;
+  border-radius: 10px;
+
+  background: #e7eaf0;
+  color: #101319;
+
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.mock-submit:hover,
+.mock-next:hover {
+  transform: translateY(-1px);
+  background: #ffffff;
+}
+
+.mock-submit:disabled,
+.mock-next:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* =========================================
+   AI EVALUATION
+   ========================================= */
+
+.evaluation-card {
+  margin-top: 20px;
+  padding: 28px;
+
+  border: 1px solid #303847;
+  border-radius: 18px;
+
+  background:
+    radial-gradient(circle at 100% 0%, rgba(100, 115, 140, 0.08), transparent 28%),
+    #11161e;
+}
+
+.evaluation-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+
+  border-bottom: 1px solid #252c37;
+}
+
+.evaluation-card__header h2 {
+  margin: 8px 0 0;
+
+  color: #f1f4f8;
+
+  font-size: 22px;
+}
+
+.evaluation-score {
+  color: #f3f5f8;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.evaluation-score small {
+  color: #687385;
+  font-size: 14px;
+}
+
+.evaluation-feedback {
+  margin-bottom: 24px;
+}
+
+.evaluation-feedback p {
+  margin: 0;
+
+  color: #b4bdca;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.evaluation-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.evaluation-columns > div {
+  padding: 18px;
+
+  border: 1px solid #252c37;
+  border-radius: 12px;
+
+  background: #0d1117;
+}
+
+.evaluation-columns ul {
+  margin: 12px 0 0;
+  padding-left: 18px;
+
+  color: #aeb8c7;
+}
+
+.evaluation-columns li {
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.evaluation-next {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 22px;
+}
+
+
+/* =========================================
+   COMPLETION
+   ========================================= */
+
+.mock-complete {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.completion-core {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  border: 1px solid #536073;
+  border-radius: 50%;
+
+  background: #141923;
+
+  color: #dce2ea;
+
+  font-size: 24px;
+}
+
+.mock-complete h1 {
+  margin: 12px 0 16px;
+
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+}
+
+.mock-complete__intro {
+  max-width: 600px;
+  margin-bottom: 35px;
+
+  color: #7c8798;
+
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+
+/* SCORE */
+
+.mock-score-card {
+  padding: 30px;
+
+  border: 1px solid #303847;
+  border-radius: 18px;
+
+  background: #11161e;
+
+  text-align: center;
+}
+
+.mock-score-card > span {
+  color: #707c8e;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+.mock-score-card strong {
+  display: block;
+
+  margin: 10px 0 4px;
+
+  color: #f4f6f9;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 56px;
+  line-height: 1;
+}
+
+.mock-score-card strong small {
+  color: #6c7789;
+  font-size: 18px;
+}
+
+.mock-score-card p {
+  margin: 0;
+
+  color: #687385;
+
+  font-size: 12px;
+}
+
+
+/* STATS */
+
+.mock-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+
+  margin: 14px 0 45px;
+}
+
+.mock-stat {
+  padding: 20px;
+
+  border: 1px solid #252c37;
+  border-radius: 14px;
+
+  background: #0f1319;
+}
+
+.mock-stat span,
+.mock-stat small {
+  display: block;
+
+  color: #687385;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
+.mock-stat strong {
+  display: block;
+
+  margin: 8px 0 4px;
+
+  color: #e9edf3;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 25px;
+}
+
+
+/* =========================================
+   REVIEW
+   ========================================= */
+
+.review-section {
+  margin-top: 20px;
+}
+
+.review-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.review-heading h2 {
+  margin: 7px 0 0;
+
+  color: #f1f4f8;
+
+  font-size: 24px;
+}
+
+.review-heading span,
+.review-heading small {
+  color: #6e798b;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.review-card {
+  padding: 23px;
+
+  border: 1px solid #272e39;
+  border-radius: 15px;
+
+  background: #10141b;
+}
+
+.review-card__top {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 13px;
+}
+
+.review-card__top span {
+  color: #687385;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
+.review-card__top strong {
+  color: #dce2ea;
+
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.review-card h3 {
+  margin: 0 0 22px;
+
+  color: #e9edf3;
+
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.review-answer,
+.review-feedback {
+  padding: 15px;
+
+  border-radius: 10px;
+
+  background: #0c1016;
+}
+
+.review-feedback {
+  margin-top: 10px;
+}
+
+.review-answer p,
+.review-feedback p {
+  margin: 0;
+
+  color: #aeb8c6;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .mock-header {
+    height: auto;
+    padding: 18px 20px;
+  }
+
+  .mock-header__status {
+    display: none;
+  }
+
+  .mock-container {
+    width: min(100% - 30px, 600px);
+    padding-top: 35px;
+  }
+
+  .mock-session__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .question-counter {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .mock-question-card {
+    padding: 25px 22px;
+  }
+
+  .mock-answer-card {
+    padding: 18px;
+  }
+
+  .evaluation-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .mock-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .review-heading {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .mock-complete h1 {
+    font-size: 40px;
+  }
+}
+
+
+
+.mock-summary-card {
+    margin-top: 20px;
+    padding: 28px;
+    background: #0f131a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+}
+
+.mock-summary-card__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.mock-summary-card__header span {
+    display: block;
+    margin-bottom: 7px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: #7d8797;
+}
+
+.mock-summary-card__header h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #f4f7fb;
+}
+
+.mock-summary-card__icon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #fff;
+}
+
+.mock-summary-card p {
+    margin: 0;
+    color: #aeb7c5;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   WEAK AREA PRACTICE
+========================================= */
+
+.weak-practice-card {
+    margin-top: 20px;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+
+    background: #10151d;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+}
+
+.weak-practice-card__content {
+    max-width: 650px;
+}
+
+.weak-practice-card__content > span {
+    display: block;
+    margin-bottom: 8px;
+
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: #7d8797;
+}
+
+.weak-practice-card__content h2 {
+    margin: 0 0 10px;
+
+    font-size: 22px;
+    line-height: 1.3;
+    color: #f4f7fb;
+}
+
+.weak-practice-card__content p {
+    margin: 0;
+
+    color: #aeb7c5;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.weak-practice-button {
+    flex-shrink: 0;
+
+    padding: 13px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 10px;
+
+    background: #f4f7fb;
+    color: #0b0e13;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.weak-practice-button:hover {
+    transform: translateY(-2px);
+    background: #ffffff;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .weak-practice-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .weak-practice-button {
+        width: 100%;
+    }
+
+}
