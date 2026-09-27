@@ -1,15 +1,13 @@
 const { GoogleGenAI } = require("@google/genai")
 const { z } = require("zod")
 const { zodToJsonSchema } = require("zod-to-json-schema")
-const puppeteer = require("puppeteer")
+// const puppeteer = require("puppeteer")
 
 const ai = new GoogleGenAI({
     apiKey: process.env.GROQ_API_KEY
 })
 
-// ============================================
-// SCHEMAS
-// ============================================
+
 const interviewReportSchema = z.object({
     matchScore: z.number().describe("A score between 0 and 100 indicating how well the candidate's profile matches the job description"),
     technicalQuestions: z.array(z.object({
@@ -43,10 +41,14 @@ const resumePdfSchema = z.object({
 // ============================================
 async function generatePdfFromHtml(htmlContent) {
     console.log("📄 Launching Puppeteer for PDF generation...")
+
+    const { default: puppeteer } = await import("puppeteer")
+
     const browser = await puppeteer.launch({
         headless: true,
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     })
+
     const page = await browser.newPage()
     await page.setContent(htmlContent, { waitUntil: "networkidle0" })
 
@@ -63,6 +65,7 @@ async function generatePdfFromHtml(htmlContent) {
 
     await browser.close()
     console.log("📄 PDF generated successfully, size:", pdfBuffer.length)
+
     return pdfBuffer
 }
 
